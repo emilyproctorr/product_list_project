@@ -1,0 +1,59 @@
+/* @font-face -> specifies custom font, can be remote server or locally installed font */
+/* format('truetype') -> indicates that the font file is in TrueType format (.ttf) */
+@font-face {
+    font-family: 'RedHatText';
+    src: url('../../public/assets/fonts/RedHatText-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
+    background-color: hsl(13, 31%, 94%);
+}
+
+.Page-Title {
+    font-family: 'RedHatText';
+    font-weight: 700;
+    color: black;
+}
+
+.Page-Title-Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 60px;
+    padding-top: 40px;
+}
+
+.Image-Grid img {
+    width: 200px;
+    height: auto;
+}
+
+.Image-Grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding-left: 60px;
+}
+
+.item_category {
+    font-size: 14px;
+    font-family: 'RedHatText';
+    font-weight: 400;
+}
+
+.item_name {
+    font-size: 16px;
+    font-family: 'RedHatText';
+    font-weight: 600;
+}
+
+.item_price {
+    font-size: 16px;
+    font-family: 'RedHatText';
+    font-weight: 600;
+}
+
+.text-container {
+    text-align: left;
+}
