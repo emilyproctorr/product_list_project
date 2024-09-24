@@ -9,13 +9,72 @@ body {
     background-color: hsl(13, 31%, 94%);
 }
 
-.Page-Title {
+/* item category label for each photo, part of text-container */
+.item_category {
+    font-size: 14px;
+    font-family: 'RedHatText';
+    font-weight: 400;
+}
+
+/* item name label for each photo, part of text-container */
+.item_name {
+    font-size: 16px;
+    font-family: 'RedHatText';
+    font-weight: 600;
+}
+
+/* item price label for each photo, part of text-container */
+.item_price {
+    font-size: 16px;
+    font-family: 'RedHatText';
+    font-weight: 600;
+}
+
+/* contains all text information under each photo */
+.text-container {
+    text-align: left;
+}
+
+/* wrapper container that holds all other containers on page */
+.outermost-wrapper-container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* container that holds the page title and images with descriptions */
+.title-images-container {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+
+/* describes info related to each food image */
+.food-image {
+    width: 200px;
+    height: auto;
+}
+
+/* container that holds each image with associated info */
+.image-grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding-left: 60px;
+    flex: 3;
+    gap: 50px;
+   
+}
+
+/* page title text */
+.page-title {
     font-family: 'RedHatText';
     font-weight: 700;
     color: black;
 }
 
-.Page-Title-Container {
+/* container that holds page title */
+.page-title-container {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -23,37 +82,43 @@ body {
     padding-top: 40px;
 }
 
-.Image-Grid img {
-    width: 200px;
-    height: auto;
+/* container that holds the your cart card */
+.your-cart-container {
+    flex: 2;
+    padding-left: 50px;
 }
 
-.Image-Grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    padding-left: 60px;
-}
-
-.item_category {
-    font-size: 14px;
+.your-cart-title {
     font-family: 'RedHatText';
-    font-weight: 400;
+    font-weight: 700;
+    padding-top: 15px;
+    padding-left: 20px;
+    font-size: 22px;
+    color: hsl(14, 86%, 42%);
+
 }
 
-.item_name {
-    font-size: 16px;
-    font-family: 'RedHatText';
-    font-weight: 600;
-}
-
-.item_price {
-    font-size: 16px;
-    font-family: 'RedHatText';
-    font-weight: 600;
-}
-
-.text-container {
+.your-cart-card {
     text-align: left;
+    width: 400px;
+    height: 500px;
+    background-color: hsl(20, 50%, 98%);
+    margin-top: 60px;
+    /* rounded corners */
+    border-radius: 15px;
 }
+
+
+.image-text-container {
+    position: relative;
+}
+
+.add-to-cart-button {
+    position: absolute;
+    left: 50%;
+    top: 180px;
+    transform: translateX(-50%);
+}
+
+                                                                           
+
