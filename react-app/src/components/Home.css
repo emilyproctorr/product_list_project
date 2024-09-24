@@ -39,6 +39,7 @@ body {
 .outermost-wrapper-container {
     display: flex;
     flex-direction: row;
+    max-width: 1440px;
 }
 
 /* container that holds the page title and images with descriptions */
@@ -88,37 +89,64 @@ body {
     padding-left: 50px;
 }
 
+/* title for your cart card */
 .your-cart-title {
     font-family: 'RedHatText';
     font-weight: 700;
-    padding-top: 15px;
+    padding-top: 0px;
     padding-left: 20px;
     font-size: 22px;
     color: hsl(14, 86%, 42%);
-
 }
 
-.your-cart-card {
-    text-align: left;
-    width: 400px;
-    height: 500px;
+/* container for your cart card */
+.your-cart-card-container {
+    width: 350px;
+    height: auto;
     background-color: hsl(20, 50%, 98%);
     margin-top: 60px;
-    /* rounded corners */
-    border-radius: 15px;
+    border-radius: 15px; /* rounded corners */
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
-
-
+/* container that holds food image and associated text descriptions */
 .image-text-container {
     position: relative;
 }
 
+/* add to cart button below each image */
 .add-to-cart-button {
     position: absolute;
     left: 50%;
     top: 180px;
     transform: translateX(-50%);
 }
+
+/* container that holds empty cart (cake) icon and associated text */
+.empty-cart-icon-text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* icon displayed when cart is empty */
+.empty-cart-icon {
+    height: 100px;
+    width: auto;
+    padding-top: 20px;
+}
+
+/* text displayed when cart is empty in your cart card */
+.empty-cart-text {
+    font-size: 13px;
+    font-family: 'RedHatText';
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 20px;
+    color: hsl(12, 20%, 44%);
+}
+
+
 
                                                                            
 

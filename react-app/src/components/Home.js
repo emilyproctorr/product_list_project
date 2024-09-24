@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Home.css";
-import data from '../data.json';
+import data from '../data.json';;
 
 function Home() {
     return (
@@ -32,8 +32,14 @@ function Home() {
           </div>
           
         <div className="your-cart-container">
-              <div className="your-cart-card">
-                <h1 className='your-cart-title'>Your Cart</h1>
+              <div className="your-cart-card-container">
+                <div className='your-cart-title-container' >
+                  <h1 className='your-cart-title'>Your Cart</h1>
+                </div>
+                <div className='empty-cart-icon-text-container'>
+                  <img className="empty-cart-icon" src="/assets/images/illustration-empty-cart.svg" alt="Empty Cart Icon" />
+                  <h2 className='empty-cart-text'>Your added items will appear here</h2>
+                </div>
               </div>
         </div>
             
