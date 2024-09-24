@@ -146,6 +146,13 @@ body {
     color: hsl(12, 20%, 44%);
 }
 
+.cart-items-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 
 
                                                                            
