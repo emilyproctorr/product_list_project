@@ -53,6 +53,7 @@ body {
 .food-image {
     width: 200px;
     height: auto;
+    border-radius: 10px;
 }
 
 /* container that holds each image with associated info */

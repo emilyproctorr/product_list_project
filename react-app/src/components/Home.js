@@ -22,20 +22,22 @@ function Home() {
             // condition ? conditionTrue : conditionFalse
             cartItem.name === item.name
                 // if condition is true, then edit cart item and increase quantity of this item and add to price
-                ? { ...cartItem, quantity: cartItem.quantity + 1, price: cartItem.price + item.price} 
+                ? { ...cartItem, quantity: cartItem.quantity + 1, total_price: cartItem.total_price + item.price} 
                 // if condition false, then keep cart item the same
                 : cartItem
           );
         } else {
           // new array with previous items and new cart item
-          return [...prevCart, { ...item, quantity: 1 }];
+          return [...prevCart, { ...item, quantity: 1, total_price: item.price}];
         }
       });
     };
 
-    useEffect(() => {
-      console.log("Cart updated: ", cart);
-    }, [cart]);
+    // grab the total number of items in cart
+    const getTotalItemsInCart = () => {
+      // add all quantity values together starting at 0
+      return cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
+    };
 
     return (
       <div>
@@ -72,7 +74,7 @@ function Home() {
           <div className="your-cart-container">
               <div className="your-cart-card-container">
                 <div className='your-cart-title-container' >
-                  <h1 className='your-cart-title'>Your Cart</h1>
+                  <h1 className='your-cart-title'>Your Cart ({getTotalItemsInCart()})</h1>
                 </div>
                 <div className='empty-cart-icon-text-container'>
                   {cart.length === 0 ? (
@@ -86,7 +88,7 @@ function Home() {
                       <div key={index} className="cart-item">
                         <p className='cart-item-name'>{cartItem.name}</p>
                         <p className='cart-item-quantity'>{cartItem.quantity}</p>
-                        <p className='cart-item-price'>${cartItem.price.toFixed(2)}</p>
+                        <p className='cart-item-price'>${cartItem.total_price.toFixed(2)}</p>
                         <hr className="cart-item-divider" />
                       </div>
                     ))}
