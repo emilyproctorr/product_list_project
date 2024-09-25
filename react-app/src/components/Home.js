@@ -39,6 +39,11 @@ function Home() {
       return cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
     };
 
+    const isItemInCart = (item) => {
+      // returns true if at least one condition returned true
+      return cart.some(cartItem => cartItem.name === item.name);
+    };
+
     return (
       <div>
         <div className="outermost-wrapper-container">
@@ -53,12 +58,30 @@ function Home() {
             <div className="image-grid-container">
                   {data.map((item, index) => (
                       <div key={index} className="image-text-container">
-                          <img src={item.image.desktop} alt={item.name} className='food-image'/>
+                          <div className='image-button-container'>
+                            <img src={item.image.desktop} alt={item.name} className='food-image'/>
 
-                          <button className='add-to-cart-button' onClick={() => handleAddToCart(item)}>
-                            Add to Cart
-                          </button>
+                            { !isItemInCart(item) ? (
+                                <button className='add-to-cart-button-no-item' onClick={() => handleAddToCart(item)}>
+                                  <img className="add-to-cart-icon" src="/assets/images/icon-add-to-cart.svg" alt="Add to Cart" /> Add to Cart
+                                </button>
+                            ) : (
 
+                              <div className='edit-cart-items'>
+                                <button className='decrement-button'>
+                                  <img className="decrement-quantity-icon" src="assets/images/icon-decrement-quantity.svg" alt="Decremnet Quantity" />
+                                </button>
+                                {/* quantity value is associated with cart, not data file, so have to use cart to find quantity value */}
+                                <p className='item-quantity-button-text'>{cart.find(cartItem => cartItem.name === item.name).quantity}</p>
+                                <button className='increment-button'>
+                                  <img className="increment-quantity-icon" src="assets/images/icon-increment-quantity.svg" alt="Increment Quantity" />
+                                </button>
+                              </div>
+
+                            )}
+
+                            
+                          </div>
                           <div className='text_container'>
                             <p className='item_category'>{item.category}</p>
                             <p className='item_name'>{item.name}</p>

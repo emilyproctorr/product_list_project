@@ -11,9 +11,12 @@ body {
 
 /* item category label for each photo, part of text-container */
 .item_category {
-    font-size: 14px;
+    font-size: 13px;
     font-family: 'RedHatText';
-    font-weight: 400;
+    font-weight: 600;
+    margin-top: 35px;
+    margin-bottom: 0px;
+    color: hsl(7, 20%, 60%);
 }
 
 /* item name label for each photo, part of text-container */
@@ -21,6 +24,8 @@ body {
     font-size: 16px;
     font-family: 'RedHatText';
     font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* item price label for each photo, part of text-container */
@@ -28,6 +33,9 @@ body {
     font-size: 16px;
     font-family: 'RedHatText';
     font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: hsl(14, 86%, 42%);
 }
 
 /* contains all text information under each photo */
@@ -51,7 +59,7 @@ body {
 
 /* describes info related to each food image */
 .food-image {
-    width: 200px;
+    width: 250px;
     height: auto;
     border-radius: 10px;
 }
@@ -61,11 +69,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
     padding-left: 60px;
-    flex: 3;
-    gap: 50px;
-   
+    flex: 1;
 }
 
 /* page title text */
@@ -87,14 +92,14 @@ body {
 /* container that holds the your cart card */
 .your-cart-container {
     flex: 2;
-    padding-left: 50px;
+    padding-left: 30px;
 }
 
 /* title for your cart card */
 .your-cart-title {
     font-family: 'RedHatText';
     font-weight: 700;
-    padding-top: 0px;
+    padding-top: 5px;
     padding-left: 20px;
     font-size: 22px;
     color: hsl(14, 86%, 42%);
@@ -111,17 +116,116 @@ body {
     display: flex;
     flex-direction: column;
 }
-/* container that holds food image and associated text descriptions */
-.image-text-container {
-    position: relative;
-}
 
 /* add to cart button below each image */
-.add-to-cart-button {
+.add-to-cart-button-no-item {
+    /* positioning */
     position: absolute;
     left: 50%;
-    top: 180px;
+    bottom: -20px;
+    height: 40px;
+    width: 150px;
     transform: translateX(-50%);
+
+    /* styling */
+    border-radius: 20px;
+    border-color: black;
+    border-width: 0.75px;
+    border-style: solid;
+    font: 'RedHatText';
+    font-weight: 600;
+    background-color: hsl(20, 50%, 98%);
+
+    /* layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-to-cart-button-no-item:hover {
+    color: hsl(14, 86%, 42%);
+}
+
+.add-to-cart-icon {
+    height: 20px;
+    margin-right: 5px;
+}
+
+.edit-cart-items {
+    /* positioning */
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    height: 40px;
+    width: 150px;
+    transform: translateX(-50%);
+
+    /* design */
+    border-radius: 20px;
+    border-color: black;
+    border-width: 0.75px;
+    border-style: solid;
+    font: 'RedHatText';
+    font-weight: 600;
+    background-color: hsl(14, 86%, 42%);
+
+    /* layout */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.decrement-button {
+    /* position and styling */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 10px;
+    border-color: white;
+    background-color: hsl(14, 86%, 42%);
+    border-style: solid;
+    border-width: 1px;
+
+    /* center button items */
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.increment-button {
+    /* position and styling */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border-width: 1px;
+    border-color: white;
+    background-color: hsl(14, 86%, 42%);
+    border-style: solid;
+
+    /* center button items */
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.increment-button:hover, .decrement-button:hover {
+    background-color: white;
+    color: hsl(14, 86%, 42%);
+}
+
+.item-quantity-button-text {
+    color: white;
+    font-family: 'RedHatText';
+    font-weight: 400;
+}
+
+
+
+.image-button-container{
+    display: flex;
+    position: relative;
 }
 
 /* container that holds empty cart (cake) icon and associated text */
@@ -132,16 +236,16 @@ body {
 
 /* icon displayed when cart is empty */
 .empty-cart-icon {
-    height: 100px;
+    height: 125px;
     width: auto;
     padding-top: 20px;
 }
 
 /* text displayed when cart is empty in your cart card */
 .empty-cart-text {
-    font-size: 13px;
+    font-size: 14px;
     font-family: 'RedHatText';
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
     padding-bottom: 20px;
     color: hsl(12, 20%, 44%);
