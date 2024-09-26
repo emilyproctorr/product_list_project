@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: hsl(13, 31%, 94%);
+    background-color: hsl(20, 50%, 98%);
 }
 
 /* item category label for each photo, part of text-container */
@@ -61,7 +61,7 @@ body {
 .food-image {
     width: 250px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 7px;
 }
 
 /* container that holds each image with associated info */
@@ -77,7 +77,7 @@ body {
 .page-title {
     font-family: 'RedHatText';
     font-weight: 700;
-    color: black;
+    color: hsl(14, 65%, 9%);
 }
 
 /* container that holds page title */
@@ -109,9 +109,9 @@ body {
 .your-cart-card-container {
     width: 350px;
     height: auto;
-    background-color: hsl(20, 50%, 98%);
+    background-color: white;
     margin-top: 60px;
-    border-radius: 15px; /* rounded corners */
+    border-radius: 7px; /* rounded corners */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -134,7 +134,7 @@ body {
     border-style: solid;
     font: 'RedHatText';
     font-weight: 600;
-    background-color: hsl(20, 50%, 98%);
+    background-color: white;
 
     /* layout */
     display: flex;
@@ -248,7 +248,7 @@ body {
 }
 
 /* container that holds empty cart (cake) icon and associated text */
-.empty-cart-icon-text-container {
+.your-cart-card-items-container {
     display: flex;
     flex-direction: column;
 }
@@ -276,6 +276,112 @@ body {
     padding-left: 20px;
     padding-right: 20px;
 }
+
+.cart-item-name {
+    font-size: 15px;
+    font-family: 'RedHatText';
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: hsl(14, 65%, 9%);
+}
+
+.cart-item-quantity {
+    font-size: 14px;
+    font-family: 'RedHatText';
+    font-weight: 700;
+    color: hsl(14, 86%, 42%);
+}
+
+.cart-item-price {
+    font-size: 14px;
+    font-family: 'RedHatText';
+    font-weight: 600;
+    color: hsl(12, 20%, 44%);
+}
+
+.cart-item-total-price {
+    font-size: 14px;
+    font-family: 'RedHatText';
+    font-weight: 700;
+    color: hsl(12, 20%, 44%);
+}
+
+.quantity-price-container {
+    display: flex;
+    direction: row;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.cart-item-divider {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: hsl(13, 31%, 94%);
+    border-style: solid;
+    border-width: 0.1px;
+}
+
+.order-total-container {
+    display: flex;
+    direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.order-total-title {
+    font-size: 16px;
+    font-family: 'RedHatText';
+    font-weight: 400;
+    color: hsl(14, 65%, 9%);
+}
+
+.order-total-price {
+    font-size: 25px;
+    font-family: 'RedHatText';
+    font-weight: 700;
+    color: hsl(14, 65%, 9%);
+}
+
+.carbon-neutral-container {
+    background-color: hsl(20, 50%, 98%);
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+
+    display: flex;
+    direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.carbon-neutral-text {
+    font-size: 12px;
+    font-family: 'RedHatText';
+    font-weight: 400;
+    color: hsl(14, 65%, 9%);
+}
+
+.confirm-order-button {
+    background-color: hsl(14, 86%, 42%);
+    color: white;
+    border: none;
+    height: 50px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    font-family: 'RedHatText';
+    font-weight: 600;
+}
+
+.confirm-order-button:hover {
+    background-color: hsl(14, 88%, 35%);
+}
+
 
 
 
