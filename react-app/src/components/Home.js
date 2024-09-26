@@ -9,29 +9,46 @@ function Home() {
 
     // adding item to user cart
     const handleAddToCart = (item) => {
-
       setCart((prevCart) => {
-
-        // check if item is already present in cart
-        const duplicateItem = prevCart.find(cartItem => cartItem.name === item.name);
-
-        if (duplicateItem) {
-          // map() function -> creates new array with results of calling function on every element of previous array
-          return prevCart.map(cartItem =>
-            // if current cart item is same as item being processed
-            // condition ? conditionTrue : conditionFalse
-            cartItem.name === item.name
-                // if condition is true, then edit cart item and increase quantity of this item and add to price
-                ? { ...cartItem, quantity: cartItem.quantity + 1, total_price: cartItem.total_price + item.price} 
-                // if condition false, then keep cart item the same
-                : cartItem
-          );
-        } else {
-          // new array with previous items and new cart item
-          return [...prevCart, { ...item, quantity: 1, total_price: item.price}];
-        }
+        return [...prevCart, { ...item, quantity: 1, total_price: item.price}];
       });
     };
+
+    const handleIncrementItem = (item) => {
+      setCart((prevCart) => {
+        // map() function -> creates new array with results of calling function on every element of previous array
+        return prevCart.map(cartItem =>
+          // if current cart item is same as item being processed
+          // condition ? conditionTrue : conditionFalse
+          cartItem.name === item.name
+              // if condition is true, then edit cart item and increase quantity of this item and add to price
+              ? { ...cartItem, quantity: cartItem.quantity + 1, total_price: cartItem.total_price + item.price} 
+              // if condition false, then keep cart item the same
+              : cartItem
+        );
+      });
+    }
+
+    const handleDecrementItem = (item) => {
+      setCart((prevCart) => {
+        return prevCart.reduce((newCart, cartItem) => {
+          if (cartItem.name === item.name) {
+            // if only 1 item in cart
+            if (cartItem.quantity === 1) {
+              // do not add this item to newCart array
+              return newCart;
+            } else {
+              // if more than 1 item in cartm then decrement quantity and total item price
+              return [...newCart, { ...cartItem, quantity: cartItem.quantity - 1, total_price: cartItem.total_price - item.price }];
+            }
+          }
+          // keep every other item in cart
+          return [...newCart, cartItem];
+          // [] indicates newCart starts as empty array
+        }, []);
+      });
+    };
+
 
     // grab the total number of items in cart
     const getTotalItemsInCart = () => {
@@ -68,14 +85,24 @@ function Home() {
                             ) : (
 
                               <div className='edit-cart-items'>
-                                <button className='decrement-button'>
-                                  <img className="decrement-quantity-icon" src="assets/images/icon-decrement-quantity.svg" alt="Decremnet Quantity" />
+
+                                <button className='decrement-button' onClick={() => handleDecrementItem(item)}>
+                                  {/* <img className="decrement-quantity-icon" src="assets/images/icon-decrement-quantity.svg" alt="Decremnet Quantity" /> */}
+                                  <svg className="decrement-quantity-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="2" fill="currentColor" viewBox="0 0 10 2">
+                                    <path fill="currentColor" d="M0 .375h10v1.25H0V.375Z"/>
+                                  </svg>
                                 </button>
+
                                 {/* quantity value is associated with cart, not data file, so have to use cart to find quantity value */}
                                 <p className='item-quantity-button-text'>{cart.find(cartItem => cartItem.name === item.name).quantity}</p>
-                                <button className='increment-button'>
-                                  <img className="increment-quantity-icon" src="assets/images/icon-increment-quantity.svg" alt="Increment Quantity" />
+
+                                <button className='increment-button' onClick={() => handleIncrementItem(item)}>
+                                  {/* <img className="increment-quantity-icon" src="assets/images/icon-increment-quantity.svg" alt="Increment Quantity" /> */}
+                                  <svg className="increment-quantity-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 10 10">
+                                    <path fill="currentColor" d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z"/>
+                                  </svg>
                                 </button>
+
                               </div>
 
                             )}

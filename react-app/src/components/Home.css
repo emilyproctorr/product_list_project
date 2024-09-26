@@ -144,6 +144,7 @@ body {
 
 .add-to-cart-button-no-item:hover {
     color: hsl(14, 86%, 42%);
+    border-color: hsl(14, 86%, 42%);
 }
 
 .add-to-cart-icon {
@@ -190,7 +191,9 @@ body {
     /* center button items */
     display: flex;
     align-items: center;
-    justify-content: center;  
+    justify-content: center;
+
+    color: white;
 }
 
 .increment-button {
@@ -208,11 +211,29 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;  
+
+    color: white;
 }
 
-.increment-button:hover, .decrement-button:hover {
-    background-color: white;
+.increment-button:hover svg {
     color: hsl(14, 86%, 42%);
+}
+
+.increment-button:hover {
+    background-color: white;
+}
+
+.decrement-button:hover svg {
+    color: hsl(14, 86%, 42%);
+}
+
+.decrement-button:hover {
+    background-color: white;
+}
+
+.increment-quantity-icon,
+.decrement-quantity-icon {
+  transform: scale(1.5);
 }
 
 .item-quantity-button-text {
@@ -220,8 +241,6 @@ body {
     font-family: 'RedHatText';
     font-weight: 400;
 }
-
-
 
 .image-button-container{
     display: flex;
