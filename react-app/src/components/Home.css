@@ -142,16 +142,19 @@ body {
     justify-content: center;
 }
 
+/* hover over add to cart button when no item is found in cart */
 .add-to-cart-button-no-item:hover {
     color: hsl(14, 86%, 42%);
     border-color: hsl(14, 86%, 42%);
 }
 
+/* add to cart icon contained in add to cart button */
 .add-to-cart-icon {
     height: 20px;
     margin-right: 5px;
 }
 
+/* container that holds increment and decrement button options */
 .edit-cart-items {
     /* positioning */
     position: absolute;
@@ -174,6 +177,7 @@ body {
     flex-direction: row;
 }
 
+/* button to decremement quantity of item in cart */
 .decrement-button {
     /* position and styling */
     width: 20px;
@@ -193,6 +197,7 @@ body {
     color: white;
 }
 
+/* button to incremement quantity of item in cart */
 .increment-button {
     /* position and styling */
     width: 20px;
@@ -212,33 +217,40 @@ body {
     color: white;
 }
 
+/* hover styling for svg image associated with increment button */
 .increment-button:hover svg {
     color: hsl(14, 86%, 42%);
 }
 
+/* hover styling for increment button */
 .increment-button:hover {
     background-color: white;
 }
 
+/* hover styling for svg image associated with decrement button */
 .decrement-button:hover svg {
     color: hsl(14, 86%, 42%);
 }
 
+/* hover styling for decrement button */
 .decrement-button:hover {
     background-color: white;
 }
 
+/* change size of icon displayed in increment and decrement quantity of item buttons */
 .increment-quantity-icon,
 .decrement-quantity-icon {
   transform: scale(1.5);
 }
 
+/* displays the number of items in cart */
 .item-quantity-button-text {
     color: white;
     font-family: 'RedHatText';
     font-weight: 400;
 }
 
+/* holds main food image and add to cart button */
 .image-button-container{
     display: flex;
     position: relative;
@@ -267,6 +279,7 @@ body {
     color: hsl(12, 20%, 44%);
 }
 
+/* holds all items currently in cart shown in you cart card */
 .cart-items-container {
     display: flex;
     flex-direction: column;
@@ -274,6 +287,7 @@ body {
     padding-right: 20px;
 }
 
+/* name of cart item */
 .cart-item-name {
     font-size: 14px;
     font-family: 'RedHatText';
@@ -283,6 +297,7 @@ body {
     color: hsl(14, 65%, 9%);
 }
 
+/* quantity of cart item */
 .cart-item-quantity {
     font-size: 14px;
     font-family: 'RedHatText';
@@ -290,6 +305,7 @@ body {
     color: hsl(14, 86%, 42%);
 }
 
+/* price of cart item */
 .cart-item-price {
     font-size: 14px;
     font-family: 'RedHatText';
@@ -297,6 +313,7 @@ body {
     color: hsl(12, 20%, 44%);
 }
 
+/* total price of cart item */
 .cart-item-total-price {
     font-size: 14px;
     font-family: 'RedHatText';
@@ -304,6 +321,7 @@ body {
     color: hsl(12, 20%, 44%);
 }
 
+/* holds both item quantity and price */
 .quantity-price-container {
     display: flex;
     flex-direction: row;
@@ -311,6 +329,7 @@ body {
     margin-top: 10px;
 }
 
+/* divier found between listed cart items */
 .cart-item-divider {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -319,6 +338,7 @@ body {
     border-width: 0.1px;
 }
 
+/* holds order total title and total price of order */
 .order-total-container {
     display: flex;
     flex-direction: row;
@@ -327,6 +347,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* order total text */
 .order-total-title {
     font-size: 16px;
     font-family: 'RedHatText';
@@ -334,6 +355,7 @@ body {
     color: hsl(14, 65%, 9%);
 }
 
+/* total price of order text */
 .order-total-price {
     font-size: 25px;
     font-family: 'RedHatText';
@@ -341,6 +363,7 @@ body {
     color: hsl(14, 65%, 9%);
 }
 
+/* holds svg image and associated text */
 .carbon-neutral-container {
     background-color: hsl(20, 50%, 98%);
     height: 50px;
@@ -354,6 +377,7 @@ body {
     gap: 5px;
 }
 
+/* text associated with carbon neutral delivery */
 .carbon-neutral-text {
     font-size: 12px;
     font-family: 'RedHatText';
@@ -361,6 +385,7 @@ body {
     color: hsl(14, 65%, 9%);
 }
 
+/* confirm order and start new order button */
 .confirm-order-button, .start-new-order-button {
     background-color: hsl(14, 86%, 42%);
     color: white;
@@ -375,27 +400,32 @@ body {
     font-weight: 600;
 }
 
+/* hover styling for confirm order and start new order button */
 .confirm-order-button:hover, .start-new-order-button:hover {
     background-color: hsl(14, 88%, 35%);
 }
 
+/* border around food image when more than one item is found within cart */
 .selected-item-border {
     outline: 3px solid hsl(14, 88%, 35%);
     outline-offset: -3px; /* dont want to change size or positioning of image when border/outline applied */
     
 }
 
+/* holds item information along with remove item button found in your cart card */
 .cart-item-info-remove-item-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.remove-item-button-container, .order-total-price-container {
+/* remove item button and total price per item containers*/
+.remove-item-button-container, .order-item-total-price-container {
     display: flex;
     align-items: center;
 }
 
+/* button to remove all instances of item from cart */
 .remove-item-button {
     width: 18px;
     height: 18px;
@@ -413,18 +443,22 @@ body {
     color: hsl(14, 25%, 72%);
 }
 
+/* icon associated with remove item button */
 .remove-item-icon {
     transform: scale(3);
 }
 
+/* svg image styling when hover over remove item button */
 .remove-item-button:hover svg {
     color: hsl(14, 65%, 9%);
 }
 
+/* styling when hover over remove item button */
 .remove-item-button:hover {
     border-color: hsl(14, 65%, 9%);
 }
 
+/* holds all content found in popup */
 .popup-content {
     background: white;
     padding: 20px;
@@ -435,63 +469,74 @@ body {
     display: flex;
     flex-direction: column;
 
-  }
+    max-height: 80vh;
+    overflow-y: auto;
+}
 
-  .popup-container {
+/* outmermost container for popup */
+.popup-container {
     position: fixed; 
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.6); /* darken rest of screen outside popup */
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .popup-content-container {
+/* holds title, item and order information, and start new order button */
+.popup-content-container {
     display: flex;
     flex-direction: column;
     margin-left: 10px;
-  }
+}
 
-  .popup-title-container {
+/* title information for popup */
+.popup-title-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-  }
+}
 
-  .popup-title-text {
+/* title associated with popup */
+.popup-title-text {
     font-size: 40px;
     font-family: 'RedHatText';
     font-weight: 700;
     color: hsl(14, 65%, 9%);
     padding-bottom: 5px;
-  }
+}
 
-  .order-confirmed-icon {
+/* icon in popup title */
+.order-confirmed-icon {
     transform: scale(0.85);
     margin-left: -5px;
     padding-bottom: 20px;
-  }
-  
-  .enjoy-food-text {
+}
+
+/* text found directly below popup title */
+.enjoy-food-text {
     font-size: 15px;
     font-family: 'RedHatText';
     font-weight: 600;
     color: hsl(7, 20%, 60%);
     padding-bottom: 10px;
-  }
+}
 
-  .order-items-container {
+/* list of all items and associated information in confirmed order */
+.order-items-container {
     background-color: hsl(20, 50%, 98%);
     border-radius: 5px;
     margin-bottom: 20px;
-  }
+}
 
+/* contains just singular item and associated information  */
 .order-items {
     margin: 20px 20px 20px 20px;
 }
-                                                                           
+
+/* total price for each item in order */
 .order-item-total-price {
     font-size: 16px;
     font-family: 'RedHatText';
@@ -499,6 +544,7 @@ body {
     color: hsl(14, 65%, 9%);
 }
 
+/* holds order total text and total price for complete order */
 .popup-order-total-container {
     display: flex;
     flex-direction: row;
@@ -507,6 +553,7 @@ body {
     margin: 25px 25px 25px 25px;
 }
 
+/* order total text */
 .popup-order-total-title {
     font-size: 15px;
     font-family: 'RedHatText';
@@ -514,6 +561,7 @@ body {
     color: hsl(14, 65%, 9%);
 }
 
+/* total price for complete order */
 .popup-order-total-price {
     font-size: 23px;
     font-family: 'RedHatText';
@@ -521,12 +569,14 @@ body {
     color: hsl(14, 65%, 9%);
 }
 
+/* food image for eahc item purchased in confirmed order */
 .popup-food-image {
     width: 50px;
     height: auto;
     border-radius: 5px;
 }
 
+/* holds food image and associated food item information in confirmed order */
 .popup-image-item-info-container {
     display: flex;
     flex-direction: row;
