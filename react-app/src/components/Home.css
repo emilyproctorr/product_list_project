@@ -163,9 +163,6 @@ body {
 
     /* design */
     border-radius: 20px;
-    border-color: black;
-    border-width: 0.75px;
-    border-style: solid;
     font: 'RedHatText';
     font-weight: 600;
     background-color: hsl(14, 86%, 42%);
@@ -278,9 +275,9 @@ body {
 }
 
 .cart-item-name {
-    font-size: 15px;
+    font-size: 14px;
     font-family: 'RedHatText';
-    font-weight: 600;
+    font-weight: 700;
     margin-top: 0px;
     margin-bottom: 0px;
     color: hsl(14, 65%, 9%);
@@ -309,7 +306,7 @@ body {
 
 .quantity-price-container {
     display: flex;
-    direction: row;
+    flex-direction: row;
     gap: 10px;
     margin-top: 10px;
 }
@@ -324,7 +321,7 @@ body {
 
 .order-total-container {
     display: flex;
-    direction: row;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
@@ -351,7 +348,7 @@ body {
     border-radius: 7px;
 
     display: flex;
-    direction: row;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 5px;
@@ -364,7 +361,7 @@ body {
     color: hsl(14, 65%, 9%);
 }
 
-.confirm-order-button {
+.confirm-order-button, .start-new-order-button {
     background-color: hsl(14, 86%, 42%);
     color: white;
     border: none;
@@ -378,12 +375,160 @@ body {
     font-weight: 600;
 }
 
-.confirm-order-button:hover {
+.confirm-order-button:hover, .start-new-order-button:hover {
     background-color: hsl(14, 88%, 35%);
 }
 
+.selected-item-border {
+    outline: 3px solid hsl(14, 88%, 35%);
+    outline-offset: -3px; /* dont want to change size or positioning of image when border/outline applied */
+    
+}
 
+.cart-item-info-remove-item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
+.remove-item-button-container, .order-total-price-container {
+    display: flex;
+    align-items: center;
+}
 
+.remove-item-button {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border-width: 1.5px;
+    border-color: hsl(14, 25%, 72%);
+    background-color: white;
+    border-style: solid;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+    color: hsl(14, 25%, 72%);
+}
+
+.remove-item-icon {
+    transform: scale(3);
+}
+
+.remove-item-button:hover svg {
+    color: hsl(14, 65%, 9%);
+}
+
+.remove-item-button:hover {
+    border-color: hsl(14, 65%, 9%);
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .popup-container {
+    position: fixed; 
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6); /* darken rest of screen outside popup */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popup-content-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  .popup-title-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .popup-title-text {
+    font-size: 40px;
+    font-family: 'RedHatText';
+    font-weight: 700;
+    color: hsl(14, 65%, 9%);
+    padding-bottom: 5px;
+  }
+
+  .order-confirmed-icon {
+    transform: scale(0.85);
+    margin-left: -5px;
+    padding-bottom: 20px;
+  }
+  
+  .enjoy-food-text {
+    font-size: 15px;
+    font-family: 'RedHatText';
+    font-weight: 600;
+    color: hsl(7, 20%, 60%);
+    padding-bottom: 10px;
+  }
+
+  .order-items-container {
+    background-color: hsl(20, 50%, 98%);
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+.order-items {
+    margin: 20px 20px 20px 20px;
+}
                                                                            
+.order-item-total-price {
+    font-size: 16px;
+    font-family: 'RedHatText';
+    font-weight: 700;
+    color: hsl(14, 65%, 9%);
+}
 
+.popup-order-total-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 25px 25px 25px;
+}
+
+.popup-order-total-title {
+    font-size: 15px;
+    font-family: 'RedHatText';
+    font-weight: 600;
+    color: hsl(14, 65%, 9%);
+}
+
+.popup-order-total-price {
+    font-size: 23px;
+    font-family: 'RedHatText';
+    font-weight: 700;
+    color: hsl(14, 65%, 9%);
+}
+
+.popup-food-image {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.popup-image-item-info-container {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
