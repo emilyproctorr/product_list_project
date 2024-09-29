@@ -4,7 +4,7 @@ import Home from './Home';
 
 function AppRoutes() {
     return (
-        <Router>
+        <Router basename="/product_list_project/react-app">
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
