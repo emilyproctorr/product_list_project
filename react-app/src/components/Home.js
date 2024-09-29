@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./Home.css";
-import data from '../data.json';;
+import data from '../data.json';
 
 function Home() {
 
@@ -111,12 +111,12 @@ function Home() {
                   {data.map((item, index) => (
                       <div key={index} className="image-text-container">
                           <div className='image-button-container'>
-                            <img src={item.image.desktop} alt={item.name} className={`food-image ${isItemInCart(item) ? 'selected-item-border' : ''}`}/>
+                            <img src={`${process.env.PUBLIC_URL}/${item.image.desktop}`} alt={item.name} className={`food-image ${isItemInCart(item) ? 'selected-item-border' : ''}`}/>
 
                             {/* if item is not found in cart, display particular add to cart button associated with this case */}
                             { !isItemInCart(item) ? (
                                 <button className='add-to-cart-button-no-item' onClick={() => handleAddToCart(item)}>
-                                  <img className="add-to-cart-icon" src="/assets/images/icon-add-to-cart.svg" alt="Add to Cart" /> Add to Cart
+                                  <img className="add-to-cart-icon" src={`${process.env.PUBLIC_URL}/assets/images/icon-add-to-cart.svg`} alt="Add to Cart" /> Add to Cart
                                 </button>
                             
                             // if item is found in cart, display increment and decrement options for item
@@ -174,7 +174,7 @@ function Home() {
                   {/* if no items are in cart */}
                   {cart.length === 0 ? (
                     <>
-                      <img className="empty-cart-icon" src="/assets/images/illustration-empty-cart.svg" alt="Empty Cart Icon" />
+                      <img className="empty-cart-icon" src={`${process.env.PUBLIC_URL}/assets/images/illustration-empty-cart.svg`} alt="Empty Cart Icon" />
                       <h2 className='empty-cart-text'>Your added items will appear here</h2>
                     </>
 
@@ -264,7 +264,7 @@ function Home() {
                         <div className='popup-image-item-info-container'>
 
                           <div>
-                            <img src={cartItem.image.desktop} alt={cartItem.name} className="popup-food-image"/>
+                            <img src={`${process.env.PUBLIC_URL}/${cartItem.image.desktop}`} alt={cartItem.name} className="popup-food-image"/>
                           </div>
 
                           <div>
