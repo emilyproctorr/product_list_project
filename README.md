@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://emilyproctorr.github.io/product_list_project/)
+- Live Site URL: [Product List Project Live Site](https://emilyproctorr.github.io/product_list_project/)
 
 ## My process
 
@@ -38,8 +38,6 @@ Users should be able to:
     - Flexbox (layout technique)
 - JS (ES6)
 - [React](https://reactjs.org/) - JS library
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### A Few Concepts What I learned
 
@@ -88,4 +86,3 @@ Users should be able to:
 ## Author
 
 - Github - [emilyproctorr](https://github.com/emilyproctorr)
-- Frontend Mentor - [@emilyproctorr](https://www.frontendmentor.io/profile/emilyproctorr)
